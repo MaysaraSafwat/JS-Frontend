@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"name": "GUESS GOLD TONESTAINLESS STEEL",
+		"price": "9999",
+		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
+		"img": "../assets/products-imgs/watch.jpg",
+		"category": "watch"
+	},
+	{
+		"id": 2,
+		"name": "SUNGLASSES ULTRAVIOLET PROTECTION",
+		"price": "4000",
+		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
+		"img": "../assets/products-imgs/sunglasses0.jpg",
+		"category": "glasses"
+	},
+    {
+		"id": 3,
+		"name": "GUESS GOLD TONESTAINLESS STEEL",
+		"price": "9999",
+		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
+		"img": "../assets/products-imgs/watch0.jpg",
+		"category": "watch"
+	},
+    {
+		"id": 4,
+		"name": "GUESS GOLD TONESTAINLESS STEEL",
+		"price": "9999",
+		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
+		"img": "../assets/products-imgs/watch1.jpg",
+		"category": "watch"
+	},
+    {
+		"id": 5,
+		"name": "GUESS GOLD TONESTAINLESS STEEL",
+		"price": "9999",
+		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
+		"img": "../assets/products-imgs/watch2.jpg",
+		"category": "watch"
+	},
+	{
+		"id": 6,
+		"name": "SUNGLASSES ULTRAVIOLET PROTECTION",
+		"price": "4000",
+		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
+		"img": "../assets/products-imgs/sunglasses1.jpg",
+		"category": "glasses"
+	}
+]
