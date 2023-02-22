@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+:root {
+    --blue: #142b6f;
+    --yellow : #ffd601;
+    --gray : #e1dee6;
+    --white: #ffffff;
+  }
+header{
+    background-color: var(--white);
+     height: 16vh;
+	box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-bottom: 1px solid var(--gray);
+}
+.heading-strip{
+    text-align: center;
+    background-color: #ffd601;
+    height: 3vh; 
+    color: var(--white);
+}
+.nav{
+  height: 11vh;
+  width: 100%;
+  padding-bottom: 1.5%;
+}
+.nav-brand {
+    font-size: 3em;
+    color: var(--blue);
+    font-family: 'Abril Fatface', cursive;
+    padding-left: 5%;
+}
+ul li {
+    font-family: 'Poppins', sans-serif;
+    padding: 4px;
+    text-transform: uppercase;
+
+}
+ul li a{
+    color : var(--blue) !important;
+    font-size: 0.8em;
+}
+.icon{
+    font-size: 1.2em;
+}
+.btn-blue {
+    border: 1px sold var(--blue);
+    background-color: transparent;
+    color : var(--blue);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 1.5% 3%;
+}
+.btn-blue {
+    border: 1px sold var(--blue);
+    background-color: transparent;
+    color : var(--blue);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 1.5% 3%;
+}
+/*ul li a:hover , ul li a:active{
+    animation : border 2s;
+}
+
+@keyframes border{
+    0% {
+        border-bottom: none;
+    }
+    100%{
+        border-bottom: 2px solid var(--blue);
+    }
+} */
+ section {
+    background-color: whitesmoke;
+    height: 10000px;
+
+} 
