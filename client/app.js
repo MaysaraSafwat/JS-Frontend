@@ -1,6 +1,7 @@
 //let path ="../data/products.json"
 
 let productsInCart =[]
+let cart= JSON.parse(localStorage.getItem('cart'));
 //===================================data section==============================================================
 let data = [
     {
@@ -117,6 +118,9 @@ console.log(cards)
 
 
 function createProductCard(product){
+let isInCart =  cart? cart.find(e=> e.id == product.id) : false;
+
+
 let productContainer = document.getElementById('product-container');
 let productCard = document.createElement("div")
     productCard.classList.add("product-card")
@@ -127,19 +131,13 @@ userName.innerHTML =`${product.name}`
 let priceTag = document.createElement("p")
   priceTag.innerHTML =`${product.price}EGP`
 let addToCartBtn = document.createElement("button");
-   addToCartBtn.innerHTML="Add to Cart"
+  let buttonTxt = isInCart? "in cart" : "Add to Cart";
+   addToCartBtn.innerHTML=`${buttonTxt}`
    addToCartBtn.classList.add("btn-blue")
    addToCartBtn.onclick = function(){
-    if(isAuth){
-        productsInCart.push(product)
-        localStorage.setItem('cart', JSON.stringify(productsInCart));
-        console.log(productsInCart)
-        addToCartBtn.innerHTML="Added to cart!"
-        addToCartBtn.style.opacity = "0.5"
-    }
-    else {
-        //redirect to signin
-    }
+	 addToCart(product)
+     	addToCartBtn.innerHTML="in cart!"
+		addToCartBtn.style.opacity = "0.5"
    }
 productCard.append(userImg);
 productCard.append(userName)
@@ -166,3 +164,19 @@ productContainer.append(productCard)
 // xhr.open('GET', path, true);
 // xhr.send();
 // }
+
+function addToCart(newCartProduct) {
+	//get cart
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    if(cart == null) cart = [];
+	//check if item is aleady in carta nd if not add it
+    if(cart.find(e=> e.id == newCartProduct.id)){
+		console.log("aleady in cart")
+	}else {
+		localStorage.setItem("cartProduct", JSON.stringify(newCartProduct));
+		cart.push(newCartProduct);
+		localStorage.setItem("cart", JSON.stringify(cart));
+		console.log(cart)
+	}
+
+};
