@@ -7,6 +7,9 @@
   }
  *{
     scroll-behavior: smooth;
+ }
+ i{
+    cursor: pointer;
  } 
 header{
         background-color: var(--white);
@@ -136,7 +139,23 @@ ul li a{
   }
 
   /* ============================================PRODUCTS SECTION========================================================= */
-  
+  /* ==========filter SECTION==========*/ 
+#filter i {
+    color: var(--blue);
+    padding: 2%;
+}
+.filterForm{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.btn-sm {
+  margin: 16px;
+  background-color: white;
+  border-radius: 20px !important;
+  border: 2px solid var(--yellow);
+  color: var(--yellow)
+}
  .products-section {
     background-color: whitesmoke;
     padding-top: 7%;

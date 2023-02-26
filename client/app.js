@@ -57,38 +57,64 @@ localStorage.setItem('products', JSON.stringify(data));
 
 //=========================================================================================================================================
 let isAuth = true;
-
+//rendering products on page load
 function loadJSON() {
-  renderProducts()
+renderProducts()
  }
-// function loadJSON() {
-// var xhr = new XMLHttpRequest();
-// xhr.onreadystatechange = () => {
-//     if(xhr.readyState === XMLHttpRequest.DONE) {
-//         if (xhr.status === 200) {
-//             let data = JSON.parse(xhr.responseText);
-//             console.log(data)
-//             localStorage.setItem('products', JSON.stringify(data));
 
-//             renderProducts()
-//         } else {
-//             window.alert('Something went wrong, fetching!!');
-//         }
-//     }
-// };
-// xhr.open('GET', path, true);
-// xhr.send();
-// }
+ //filtering products
+function displayFilter(){
+  let filtercheck = document.querySelector(".filterForm")
+  filtercheck.style.display = "flex"
+} 
+function handleFilterClick(f){
+	switch(f) {
+		case "all":
+			renderProducts(true)
+		  break;
+		case "watches":
+			renderProducts("watch");
+		  break;
+		case "glasses":
+			renderProducts("glasses")
+		break;
+		case "x" :
+			let filtercheck = document.querySelector(".filterForm");
+			filtercheck.style.display="none"
+        break;   		
+	 }
+}
 
 
 function renderProducts(cat) {
+console.log(cat)
 let data = JSON.parse(localStorage.getItem('products'));
-data.map(el=>{
-    createProductCard(el)
-})
-
+if(!cat){
+	data.map(el=>{
+		createProductCard(el)
+		 
+	 })
+} else  {
+	let cards = document.querySelectorAll(".product-card")
+	cards.forEach(i=> i.remove())
+console.log(cards)
+	let filtered = []
+	data.map(el=>{
+		if(cat == el.category){
+			filtered.push(el)
+		}else{
+			filtered.push(el)
+		}
+	})
+	console.log(filtered)
+	filtered.map(x=>{
+		createProductCard(x)
+	})
+}
 
 }
+
+
 
 function createProductCard(product){
 let productContainer = document.getElementById('product-container');
@@ -122,3 +148,21 @@ productCard.append(addToCartBtn);
 productContainer.append(productCard)
 
 }
+// function loadJSON() {
+// var xhr = new XMLHttpRequest();
+// xhr.onreadystatechange = () => {
+//     if(xhr.readyState === XMLHttpRequest.DONE) {
+//         if (xhr.status === 200) {
+//             let data = JSON.parse(xhr.responseText);
+//             console.log(data)
+//             localStorage.setItem('products', JSON.stringify(data));
+
+//             renderProducts()
+//         } else {
+//             window.alert('Something went wrong, fetching!!');
+//         }
+//     }
+// };
+// xhr.open('GET', path, true);
+// xhr.send();
+// }

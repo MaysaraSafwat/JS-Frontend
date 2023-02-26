@@ -87,6 +87,16 @@
     <h3>
       Our Collection
     </h3>
+    <div id="filter">
+      <i class="fa-solid fa-filter" onclick="displayFilter()"></i>
+     <!-- ============= -->
+     <div class="filterForm">
+            <button class="btn-sm" onclick="handleFilterClick('all')">All</button>
+            <button class="btn-sm" onclick="handleFilterClick('watches')">Watches</button>
+            <button class="btn-sm" onclick="handleFilterClick('glasses')">Glasses</button>
+            <i class="fa-solid fa-xmark" onclick="handleFilterClick('x')"></i>
+    </div>
+  </div>
     <div class="product-list-container" id="product-container">
    
     </div>
