@@ -156,6 +156,20 @@ ul li a{
     align-items: center;
     justify-content: space-around;
 }
+@media (max-width: 780px) {
+   .product-card {
+        width: 300px !important;
+    }
+  }
+@media (max-width: 580px) {
+    .product-list-container{
+      flex-direction: column;
+      height: fit-content;
+    }
+    .product-card {
+        width: 90% !important;
+    }
+  }
 .product-card{
     width:25%;
     text-align: center;
