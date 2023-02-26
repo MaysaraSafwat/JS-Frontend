@@ -1,5 +1,5 @@
 //let path ="../data/products.json"
-
+let productsInCart =[]
 let data = [
     {
 		"id": 1,
@@ -50,8 +50,7 @@ let data = [
 		"category": "glasses"
 	}
 ]
-let parsedData = JSON.parse(data);
-localStorage.setItem('products', JSON.stringify(parsedData));
+localStorage.setItem('products', JSON.stringify(data));
 
 function loadJSON() {
   renderProducts()
@@ -98,6 +97,9 @@ let priceTag = document.createElement("p")
 let addToCartBtn = document.createElement("button");
    addToCartBtn.innerHTML="Add to Cart"
    addToCartBtn.classList.add("btn-blue")
+   addToCartBtn.onclick = function(){
+    console.log(this);
+   }
 productCard.append(userImg);
 productCard.append(userName)
 productCard.append(priceTag);
