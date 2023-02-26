@@ -1,5 +1,7 @@
 //let path ="../data/products.json"
+
 let productsInCart =[]
+//===================================data section==============================================================
 let data = [
     {
 		"id": 1,
@@ -52,6 +54,10 @@ let data = [
 ]
 localStorage.setItem('products', JSON.stringify(data));
 
+
+//=========================================================================================================================================
+let isAuth = true;
+
 function loadJSON() {
   renderProducts()
  }
@@ -98,7 +104,16 @@ let addToCartBtn = document.createElement("button");
    addToCartBtn.innerHTML="Add to Cart"
    addToCartBtn.classList.add("btn-blue")
    addToCartBtn.onclick = function(){
-    console.log(this);
+    if(isAuth){
+        productsInCart.push(product)
+        localStorage.setItem('cart', JSON.stringify(productsInCart));
+        console.log(productsInCart)
+        addToCartBtn.innerHTML="Added to cart!"
+        addToCartBtn.style.opacity = "0.5"
+    }
+    else {
+        //redirect to signin
+    }
    }
 productCard.append(userImg);
 productCard.append(userName)

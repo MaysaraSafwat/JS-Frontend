@@ -212,3 +212,43 @@ ul li a{
     font-size: 0.9em;
     font-weight: 500;
 }
+
+ /* ============================================FOOTER SECTION===============*/
+ footer{
+    background-color: var(--yellow);
+     height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+
+ }
+ .social-media-section{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+ }
+ .social-media-section i {
+    font-size: 2em;
+    margin: 0.5em;
+    color: var(--blue);
+
+ }
+ .footer-links{
+    font-weight: 500;
+    color: var(--blues);
+ }
+ .footer-links ul li {
+    color: var(--blue)
+ }
+ .footer-logo div{
+    font-size: 3em;
+    color: var(--blue);
+    font-family: 'Abril Fatface', cursive;
+ }
+ @media (max-width: 680px) {
+    footer{
+      flex-direction: column;
+      height: fit-content;
+    }
+  }
