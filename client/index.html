@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js project</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<style>
+
+</style>
+</head>
+<body onload="loadJSON()">
+   
+       <header class="fixed-top"style="background-color: white">
+        <div class="heading-strip">
+            <p style="height: 100%;">SHOP BEFORE THE 4TH MARCH</p>
+        </div> 
+        <nav style="width: 100%;" class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid justify-content-sm-end">
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse nav " id="navbarNav">
+              <div class="brand nav-brand w-30">W&S</div>
+              <ul class="navbar-nav  w-100 justify-content-end" style="max-width: 80%; margin: 0 auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#products">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"><i class="fa-solid fa-cart-shopping icon"></i></a>
+                  </li>
+                  <li class="nav-item d-flex">
+                    <a class="nav-link">
+                        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                    </a>
+                  </li>
+                </ul> 
+              </div>
+            </div>
+          </nav>
+       </header>
+
+<!-- Hero -->
+<div class="hero-section">
+    <div class="hero-imgs">
+        <img src="../assets/home-imgs/watch1hero.jpg"/>
+        <img src="../assets/home-imgs/glasses2.jpg"/>
+        <span></span>
+   </div>
+  <div class="hero-headings">
+    <h3>COMPLETE YOUR LOOK WITH THE HIGHIEST QUALITY ACCESORRIES</h3>
+    <div></div>
+   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae numquam et,perspiciatis nemo doloribus ipsa dolores sequi veritatis temporibus minus qui</p>
+    <button class="btn-blue">Shop Now</button>
+  </div>
+</div>
+
+
+<!--End  Hero -->
+       
+ <!-- PRODUCTS SECTION -->
+ <section class="products-section" id="products">
+    <h3>
+      Our Collection
+    </h3>
+    <div id="filter">
+      <i class="fa-solid fa-filter" onclick="displayFilter()"></i>
+     <!-- ============= -->
+     <div class="filterForm">
+            <button class="btn-sm" onclick="handleFilterClick('all')">All</button>
+            <button class="btn-sm" onclick="handleFilterClick('watches')">Watches</button>
+            <button class="btn-sm" onclick="handleFilterClick('glasses')">Glasses</button>
+            <i class="fa-solid fa-xmark" onclick="handleFilterClick('x')"></i>
+    </div>
+  </div>
+    <div class="product-list-container" id="product-container">
+   
+    </div>
+ </section>
+
+ <!-- End PRODUCTS SECTION -->
+
+ <!-- FOOTER SECTION  -->
+ <footer>
+  <div class="social-media-section">
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      <li><a>Contact us</a></li>
+      <li><a>About us</a></li>
+      <li><a>Some other link</a></li>
+    </ul>
+  </div>
+   <div class="footer-logo">
+     <div>W&S</div>
+   </div>
+ </footer>
+ <!-- END FOOTER SECTION -->
+    <script src="./app.js">
+    </script>
+   
+</body>
+</html>

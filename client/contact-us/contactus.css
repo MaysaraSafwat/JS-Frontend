@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.content{
+    position: relative;
+    max-width: 100%;
+    min-height: 20vh;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+.small-cont{
+    text-align: center;
+    width: 800px;
+}
+.content p{
+    font-size: 20px;
+}
+.content h3{
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.main-part{
+    min-height: 80vh;
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info{
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+.contact-info i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+.contact-form{
+    max-width: 700px;
+    margin-right: 50px;
+}
+.contact-info, .contact-form{
+    flex: 1;
+}
+.contact-form h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.text-box{
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+.text-box:first-child{
+    margin-right: 15px;
+}
+textarea{
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+.send-btn{
+    float: left;
+    width: 80%;
+    border: none;
+    height: 40px;
+    background-color: rgba(47, 83, 225, 0.523);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+.send-btn:hover{
+    background-color: rgb(83, 147, 207);
+}
+@media screen and (max-width: 950px){
+    .contact-section{
+        flex-direction: column;
+    }
+    .contact-info, .contact-form{
+        margin: 30px 50px;
+    }
+    .contact-form h2{
+        font-size: 30px;
+    }
+    .contact-form .text-box{
+        width: 100%;
+    }
+}
