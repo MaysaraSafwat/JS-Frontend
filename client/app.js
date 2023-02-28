@@ -119,7 +119,6 @@ console.log(cards)
 }
 
 
-
 function createProductCard(product){
 let isInCart =  cart? cart.find(e=> e.id == product.id) : false;
 
@@ -143,6 +142,7 @@ let addToCartBtn = document.createElement("button");
   let buttonTxt = isInCart? "in cart" : "Add to Cart";
    addToCartBtn.innerHTML=`${buttonTxt}`
    addToCartBtn.classList.add("btn-blue")
+   //add to cart functionality
    addToCartBtn.onclick = function(){
 	 addToCart(product)
      	addToCartBtn.innerHTML="in cart!"
@@ -151,6 +151,7 @@ let addToCartBtn = document.createElement("button");
 
  let favBtn = document.createElement("button")
      favBtn.innerHTML='<i class="fa-regular fa-heart"></i>'
+	 //favorite button functionality
 	 favBtn.addEventListener("click", function(){
 		favBtn.innerHTML='<i class="fa-solid fa-heart"></i>'
 		addToFavs(product)
@@ -159,8 +160,6 @@ let addToCartBtn = document.createElement("button");
 	 buttonsContainer.append(favBtn)
 
 
-  //append buttons to buttons container
-  //apend buttoncontainerd to card  
 productCard.append(userImg);
 productCard.append(userName)
 productCard.append(priceTag);
@@ -168,24 +167,7 @@ productCard.append(buttonsContainer);
 productContainer.append(productCard)
 
 }
-// function loadJSON() {
-// var xhr = new XMLHttpRequest();
-// xhr.onreadystatechange = () => {
-//     if(xhr.readyState === XMLHttpRequest.DONE) {
-//         if (xhr.status === 200) {
-//             let data = JSON.parse(xhr.responseText);
-//             console.log(data)
-//             localStorage.setItem('products', JSON.stringify(data));
 
-//             renderProducts()
-//         } else {
-//             window.alert('Something went wrong, fetching!!');
-//         }
-//     }
-// };
-// xhr.open('GET', path, true);
-// xhr.send();
-// }
 
 function addToCart(newCartProduct) {
 	//get cart
@@ -206,7 +188,6 @@ function addToCart(newCartProduct) {
 function addToFavs (favedProduct){
 	let favs = JSON.parse(localStorage.getItem("favoriteProducts"));
     if(favs == null) favs = [];
-	//check if item is aleady in carta nd if not add it
     if(favs.find(e=> e.id == favedProduct.id)){
 		console.log("aleady in favorites")
 	}else {
