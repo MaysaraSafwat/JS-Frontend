@@ -240,6 +240,17 @@ ul li a{
     color: var(--blue);
     font-size: 1em;
 }
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap:1%;
+}
+.buttons-container button:last-of-type{
+  color :var(--yellow);
+  border: none;
+  background-color: transparent;
+  font-size: 1.4em;
+}
 .product-card p:last-of-type {
     border: none;
     color: var(--yellow);

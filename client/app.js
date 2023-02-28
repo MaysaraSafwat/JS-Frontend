@@ -53,7 +53,10 @@ let data = [
 		"category": "glasses"
 	}
 ]
+
+let f =[]
 localStorage.setItem('products', JSON.stringify(data));
+localStorage.setItem("favoriteProducts", JSON.stringify(f));
 
 
 //=========================================================================================================================================
@@ -134,6 +137,8 @@ let userName = document.createElement("p")
 userName.innerHTML =`${product.name}`
 let priceTag = document.createElement("p")
   priceTag.innerHTML =`${product.price}EGP`
+let buttonsContainer = document.createElement("div")
+buttonsContainer.classList.add("buttons-container")
 let addToCartBtn = document.createElement("button");
   let buttonTxt = isInCart? "in cart" : "Add to Cart";
    addToCartBtn.innerHTML=`${buttonTxt}`
@@ -143,10 +148,23 @@ let addToCartBtn = document.createElement("button");
      	addToCartBtn.innerHTML="in cart!"
 		addToCartBtn.style.opacity = "0.5"
    }
+
+ let favBtn = document.createElement("button")
+     favBtn.innerHTML='<i class="fa-regular fa-heart"></i>'
+	 favBtn.addEventListener("click", function(){
+		favBtn.innerHTML='<i class="fa-solid fa-heart"></i>'
+		addToFavs(product)
+	 })
+	 buttonsContainer.append(addToCartBtn);
+	 buttonsContainer.append(favBtn)
+
+
+  //append buttons to buttons container
+  //apend buttoncontainerd to card  
 productCard.append(userImg);
 productCard.append(userName)
 productCard.append(priceTag);
-productCard.append(addToCartBtn);
+productCard.append(buttonsContainer);
 productContainer.append(productCard)
 
 }
@@ -184,3 +202,17 @@ function addToCart(newCartProduct) {
 	}
 
 };
+
+function addToFavs (favedProduct){
+	let favs = JSON.parse(localStorage.getItem("favoriteProducts"));
+    if(favs == null) favs = [];
+	//check if item is aleady in carta nd if not add it
+    if(favs.find(e=> e.id == favedProduct.id)){
+		console.log("aleady in favorites")
+	}else {
+		localStorage.setItem("fP", JSON.stringify(favedProduct));
+	   favs.push(favedProduct);
+		localStorage.setItem("favoriteProducts", JSON.stringify(favs));
+		console.log(favs)
+	}
+}
