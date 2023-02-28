@@ -192,6 +192,7 @@ ul li a{
 .product-card{
     width:25%;
     text-align: center;
+    text-decoration: none;
     background-color: var(--white);
     padding: 3% 2%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

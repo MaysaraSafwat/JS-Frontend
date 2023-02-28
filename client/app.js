@@ -122,7 +122,8 @@ let isInCart =  cart? cart.find(e=> e.id == product.id) : false;
 
 
 let productContainer = document.getElementById('product-container');
-let productCard = document.createElement("div")
+let productCard = document.createElement("a")
+  productCard.href = "#"
     productCard.onclick = function (){
 		localStorage.setItem("chosenProduct", JSON.stringify(product))
 	}
