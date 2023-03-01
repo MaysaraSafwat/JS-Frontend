@@ -11,6 +11,7 @@ let data = [
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch.jpg",
 		"category": "watch"
+		,"item":1
 	},
 	{
 		"id": 2,
@@ -19,6 +20,7 @@ let data = [
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/sunglasses0.jpg",
 		"category": "glasses"
+		,"item":1
 	},
     {
 		"id": 3,
@@ -27,6 +29,7 @@ let data = [
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch0.jpg",
 		"category": "watch"
+		,"item":1
 	},
     {
 		"id": 4,
@@ -35,6 +38,7 @@ let data = [
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch1.jpg",
 		"category": "watch"
+		,"item":1
 	},
     {
 		"id": 5,
@@ -43,6 +47,7 @@ let data = [
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch2.jpg",
 		"category": "watch"
+		,"item":1
 	},
 	{
 		"id": 6,
@@ -51,12 +56,10 @@ let data = [
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/sunglasses1.jpg",
 		"category": "glasses"
+		,"item":1
 	}
 ]
-
-let f =[]
 localStorage.setItem('products', JSON.stringify(data));
-localStorage.setItem("favoriteProducts", JSON.stringify(f));
 
 
 //=========================================================================================================================================
@@ -125,11 +128,7 @@ let isInCart =  cart? cart.find(e=> e.id == product.id) : false;
 
 
 let productContainer = document.getElementById('product-container');
-let productCard = document.createElement("a")
-  productCard.href = "#"
-    productCard.onclick = function (){
-		localStorage.setItem("chosenProduct", JSON.stringify(product))
-	}
+let productCard = document.createElement("div")
     productCard.classList.add("product-card")
 let userImg = document.createElement("img")
 userImg.setAttribute("src", product.img);
@@ -137,8 +136,6 @@ let userName = document.createElement("p")
 userName.innerHTML =`${product.name}`
 let priceTag = document.createElement("p")
   priceTag.innerHTML =`${product.price}EGP`
-let buttonsContainer = document.createElement("div")
-buttonsContainer.classList.add("buttons-container")
 let addToCartBtn = document.createElement("button");
   let buttonTxt = isInCart? "in cart" : "Add to Cart";
    addToCartBtn.innerHTML=`${buttonTxt}`
@@ -148,23 +145,10 @@ let addToCartBtn = document.createElement("button");
      	addToCartBtn.innerHTML="in cart!"
 		addToCartBtn.style.opacity = "0.5"
    }
-
- let favBtn = document.createElement("button")
-     favBtn.innerHTML='<i class="fa-regular fa-heart"></i>'
-	 favBtn.addEventListener("click", function(){
-		favBtn.innerHTML='<i class="fa-solid fa-heart"></i>'
-		addToFavs(product)
-	 })
-	 buttonsContainer.append(addToCartBtn);
-	 buttonsContainer.append(favBtn)
-
-
-  //append buttons to buttons container
-  //apend buttoncontainerd to card  
 productCard.append(userImg);
 productCard.append(userName)
 productCard.append(priceTag);
-productCard.append(buttonsContainer);
+productCard.append(addToCartBtn);
 productContainer.append(productCard)
 
 }
@@ -202,17 +186,3 @@ function addToCart(newCartProduct) {
 	}
 
 };
-
-function addToFavs (favedProduct){
-	let favs = JSON.parse(localStorage.getItem("favoriteProducts"));
-    if(favs == null) favs = [];
-	//check if item is aleady in carta nd if not add it
-    if(favs.find(e=> e.id == favedProduct.id)){
-		console.log("aleady in favorites")
-	}else {
-		localStorage.setItem("fP", JSON.stringify(favedProduct));
-	   favs.push(favedProduct);
-		localStorage.setItem("favoriteProducts", JSON.stringify(favs));
-		console.log(favs)
-	}
-}
