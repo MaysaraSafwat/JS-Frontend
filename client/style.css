@@ -297,3 +297,8 @@ ul li a{
       height: fit-content;
     }
   }
+
+
+  .hide {
+    display: none !important;
+  }

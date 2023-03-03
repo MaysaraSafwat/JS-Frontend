@@ -1,5 +1,5 @@
 //let path ="../data/products.json"
-
+let isAuth = true;
 let productsInCart =[]
 let cart= JSON.parse(localStorage.getItem('cart'));
 //===================================data section==============================================================
@@ -58,9 +58,10 @@ let f =[]
 localStorage.setItem('products', JSON.stringify(data));
 localStorage.setItem("favoriteProducts", JSON.stringify(f));
 
-
+let logout = document.getElementById("logout-icon");
+  isAuth? logout.classList.remove("hide") : logout.classList.add("hide") ;
 //=========================================================================================================================================
-let isAuth = true;
+
 //rendering products on page load
 function loadJSON() {
 renderProducts()
@@ -195,5 +196,18 @@ function addToFavs (favedProduct){
 	   favs.push(favedProduct);
 		localStorage.setItem("favoriteProducts", JSON.stringify(favs));
 		console.log(favs)
+	}
+}
+
+
+//handle ccart click
+function handleCartClick(){
+	let cartIcon = document.querySelector("#cart-icon a") 
+	if(isAuth){
+		//change with cart path
+		cartIcon.setAttribute("href", "./profile/profile.html")
+	}else {
+		//change with login path
+		cartIcon.setAttribute("href", "./profile/profile.html")
 	}
 }
