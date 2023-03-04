@@ -180,8 +180,8 @@ h6 ,  .b{
     cursor: pointer;
 }
 /* buyNow */
-.buy{
-    font-size: 15px;  /*11*/
+/* .buy{
+    font-size: 15px;  
     text-align: center;
     width: 379px;
     font-weight: bold;
@@ -198,7 +198,7 @@ h6 ,  .b{
     background-color: rgb(255, 255, 255);
     color: #000;
     border: 2px solid #142b6f;
-}
+} */
 /*****************************************************************/
 .box{
     width: 470px;

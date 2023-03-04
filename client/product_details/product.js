@@ -26,7 +26,12 @@ SmallImg[0].setAttribute('src',`../${product.img}`);
 SmallImg[1].setAttribute('src',`../${product.img}`);
 SmallImg[2].setAttribute('src',`../${product.img}`);
 SmallImg[3].setAttribute('src',`../${product.img}`);
-
+var ProductTitle = document.getElementById("title");
+var ProductPrice = document.getElementById("price");
+var ProductDes = document.getElementById("demo");
+ProductTitle.innerHTML = `${product.name}`;
+ProductPrice.innerHTML = "$"+`${product.price}`;
+ProductDes.innerHTML = `${product.description}`;
 /*********************************************************************************************************************/
 //descrition(+,-)
 function appears(){
