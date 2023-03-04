@@ -11,12 +11,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-     /* border: 2px solid red;  */
+    box-sizing: border-box; 
+     /* border: 2px solid red; */
+     scroll-behavior: smooth;
   }
   
   body {
     font-family: sans-serif;
+
   }
   
   i {
@@ -29,78 +31,56 @@
   }
 
  /* =====================================================================HEADER=========================================== */
-
-  .nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: var(--gray);
-    color: var(--white);
-    padding: 25px 60px;
-    margin-bottom: 30px;
-    height: 100px;
-   
-  }
-
-  ul{
-
-      list-style: none;
-      margin-left: auto;
-  }
-  ul li{
-  display: inline-block;
- margin-left: 10px;
-    font-size: 22px;
-    font-weight: 400;
-    text-transform: uppercase;
-  
-  }
-  .cart {
-    position: relative;
-    background-color: var(--gray);
-    font-size: 30px;
-    /* padding: 5px; */
-    border-radius: 7px;
-    margin-right: 20px;
-
-  }
-  
-  .cartAmount {
-    position: absolute;
-    top: -15px;
-    right: -10px;
-    font-size: 16px;
-    background-color: var(--red);
-    color: var(--white);
-    padding: 3px;
-    border-radius: 6px;
-  }
-  
- /* ====================================================TABLE SECTION============================================================== */
- 
-#cart_container{
-  overflow-x: auto;
+ header{
+  background-color: var(--white);
+  height: 16vh;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-bottom: 1px solid var(--gray);
 }
-table{
-  width: 100%;
-
+.heading-strip{
+text-align: center;
+background-color: #ffd601;
+height: 3vh; 
+color: var(--white);
+} 
+.nav{
+height: 11vh;
+width: 100%;
+padding-bottom: 1.5%;
+}
+.nav-brand {
+font-size: 3em;
+color: var(--blue);
+font-family: 'Abril Fatface', cursive;
+padding-left: 5%;
+}
+ul li {
+font-family: 'Poppins', sans-serif;
+padding: 4px;
+text-transform: uppercase;
 
 }
-table th{
-  text-align: center;
-  background-color:var(--blue);
-  color: var(--white);
-padding: 5px;
+ul li a{
+color : var(--blue) !important;
+font-size: 0.8em;
 }
-table td{
-  text-align: center;
-  border: 2px solid black;
-
-
+.icon{
+font-size: 1.2em;
+}
+.btn-blue {
+background-color: var(--blue);
+color : var(--white);
+border-radius: 30px;
+cursor: pointer;
+padding: 3%;
+width: 50%;
+font-weight: bolder;
+border: none;
+font-family: "Poppins", sans-serif;
 }
 
 .removeAll {
-  background-color: #F17663;
+  background-color:var(--blue);
 
   color: var(--white);
   border: none;
@@ -109,6 +89,55 @@ table td{
   cursor: pointer;
 
 }
+
+
+  .cart {
+    position: relative;
+    background-color: var(--gray);
+    font-size: 18px;
+     padding: 5px; 
+    border-radius: 7px;
+    margin-right: 20px;
+
+  }
+   
+  .cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 10px;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 3px;
+    border-radius: 2px;
+  }
+  
+ /* ====================================================TABLE SECTION============================================================== */
+ 
+#cart_container{
+  overflow-x: auto;
+  
+}
+table{
+  width: 100%;
+margin-top: 20px;
+
+
+}
+table th{
+  text-align: center;
+  background-color:var(--blue);
+  color: var(--white);
+padding: 5px;
+
+}
+table td{
+  text-align: center;
+  border: 2px solid black;
+
+
+}
+
 
 
 .delete{
@@ -187,6 +216,7 @@ margin-left: 50px;
 #label h2{
   background-color: var(--blue);
   color: var(--white);
+  border-radius: 10px;
 }
 
 .HomeBtn,
@@ -222,6 +252,47 @@ h2{
  
 
 
+
+ /* ============================================FOOTER SECTION===============*/
+ footer{
+  background-color: var(--yellow);
+   height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  margin-top: 20px;
+
+}
+.social-media-section{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+.social-media-section i {
+  font-size: 2em;
+  margin: 0.5em;
+  color: var(--blue);
+
+}
+.footer-links{
+  font-weight: 500;
+  color: var(--blues);
+}
+.footer-links ul li {
+  color: var(--blue)
+}
+.footer-logo div{
+  font-size: 3em;
+  color: var(--blue);
+  font-family: 'Abril Fatface', cursive;
+}
+@media (max-width: 680px) {
+  footer{
+    flex-direction: column;
+    height: fit-content;
+  }
+}
 
 
 

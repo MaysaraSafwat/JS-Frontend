@@ -84,9 +84,9 @@ function decrement(id) {
     search.item -= 1;
     }
   update(id);
-  console.log(search.item)
+ // console.log(search.item)
   basket = basket.filter((x) => x.item >0);
-  console.log(basket)
+ // console.log(basket)
   generateCartItems();
   localStorage.setItem("cart", JSON.stringify(basket));
 }
