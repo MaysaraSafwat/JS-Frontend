@@ -2,24 +2,8 @@ body{
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     position: relative;
-   /* background-image: url('../assets/home-imgs/watch1hero.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;*/
+   }
 
-
-  }
-  
-  .cont{
-    /*border:1px solid white;*/
-    width: 600px;
-    height: 350px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    display: inline-flex; 
-    
-  }
   .cont {
     margin: 10px solid black;
     width: 50%;
@@ -67,14 +51,12 @@ body{
     background-color: #142B6F;
     width: 94%;
     height: 66%;
-    /* position: absolute; */
     transform: translate(0,-50%);
     top: 51%;
     display: inline-flex;
     justify-content: space-around;
     align-items: baseline;
     flex-wrap: nowrap;
-    /* flex-direction: row-reverse; */
     align-content: stretch;
   }
 
@@ -215,22 +197,17 @@ body{
     right: 0px;
     margin-bottom: 0px;
     }
-    section img{
-      width: 45%;
-      height: 70%;
-      position: absolute;
-      top: 13%;
-      opacity:0.5; 
-    }
-    .bg {
-      /* The image used */
-      background-image: url("img_girl.jpg");
+   /* 
+@media (max-width: 780px) {
     
-      /* Full height */
-      height: 100%; 
-    
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+     .frontbox{
+        margin: 15% 5% !important;
     }
+   }
+ @media (max-width: 580px) {
+  
+    .frontbox{
+        margin: 15% 5% !important;
+    }
+   }
+   */

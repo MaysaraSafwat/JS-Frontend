@@ -11,7 +11,7 @@ const signUp = e => {
         );
   
     if(!exist){
-        formData.push({ fname, email, pwd });
+        formData.push({ fname: fname, email:email, pwd:pwd});
         localStorage.setItem('formData', JSON.stringify(formData));
         document.querySelector('form').reset();
         document.getElementById('fname').focus();
@@ -24,8 +24,7 @@ const signUp = e => {
   }
   
   function signIn(e) {
-    let email = document.getElementById('email').value;
-    let  pwd = document.getElementById('pwd').value;
+    let email = document.getElementById('email').valuem , pwd = document.getElementById('pwd').value;
     let formData = JSON.parse(localStorage.getItem('formData')) || [];
     let exist = formData.length && 
     JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
@@ -34,7 +33,7 @@ const signUp = e => {
     }
     else{
       //index page
-        location.href = "../index.html";
+        location.href = "index.html";
     }
     e.preventDefault();
   }
