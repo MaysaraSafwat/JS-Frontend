@@ -9,7 +9,7 @@ let data = [
 		"name": "GUESS GOLD TONESTAINLESS STEEL",
 		"price": "9999",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
-		"img": "../../assets/products-imgs/watch.jpg",
+		"img": "../assets/products-imgs/watch.jpg",
 		"category": "watch"
 		,"item":1
 	},
@@ -18,7 +18,7 @@ let data = [
 		"name": "SUNGLASSES ULTRAVIOLET PROTECTION",
 		"price": "4000",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
-		"img": "../../assets/products-imgs/sunglasses0.jpg",
+		"img": "../assets/products-imgs/sunglasses0.jpg",
 		"category": "glasses"
 		,"item":1
 	},
@@ -27,7 +27,7 @@ let data = [
 		"name": "GUESS GOLD TONESTAINLESS STEEL",
 		"price": "9999",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
-		"img": "../../assets/products-imgs/watch0.jpg",
+		"img": "../assets/products-imgs/watch0.jpg",
 		"category": "watch"
 		,"item":1
 	},
@@ -36,7 +36,7 @@ let data = [
 		"name": "GUESS GOLD TONESTAINLESS STEEL",
 		"price": "9999",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
-		"img": "../../assets/products-imgs/watch1.jpg",
+		"img": "../assets/products-imgs/watch1.jpg",
 		"category": "watch"
 		,"item":1
 	},
@@ -45,7 +45,7 @@ let data = [
 		"name": "GUESS GOLD TONESTAINLESS STEEL",
 		"price": "9999",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
-		"img": "../../assets/products-imgs/watch2.jpg",
+		"img": "../assets/products-imgs/watch2.jpg",
 		"category": "watch"
 		,"item":1
 	},
@@ -54,7 +54,7 @@ let data = [
 		"name": "SUNGLASSES ULTRAVIOLET PROTECTION",
 		"price": "4000",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
-		"img": "../../assets/products-imgs/sunglasses1.jpg",
+		"img": "../assets/products-imgs/sunglasses1.jpg",
 		"category": "glasses"
 		,"item":1
 	}

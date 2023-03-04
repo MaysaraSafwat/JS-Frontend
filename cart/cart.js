@@ -42,7 +42,7 @@ function generateCartItems() {
     ShoppingCart.innerHTML = ``;
     label.innerHTML = `
        <h2>Cart is Empty</h2>
-       <a href="../index.html">
+       <a href="../client/index.html">
        <button class="HomeBtn">Back to home</button>
        </a>
     `;
@@ -141,7 +141,7 @@ function TotalAmount() {
     <h4>Total Bill  :  ${amount}</h4>
     </div>
     <div class="button_cart" >
-    <button  class="gotohome"> <a href="../index.html"<i class="bi bi-arrow-left arrow"> continue shopping</i></a> </button>
+    <button  class="gotohome"> <a href="../client/index.html"<i class="bi bi-arrow-left arrow"> continue shopping</i></a> </button>
     <button   class="checkout"> proceed Checkout</button>
      <div>
     `;
