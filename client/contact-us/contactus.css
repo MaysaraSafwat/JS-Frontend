@@ -1,123 +1,297 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
-.content{
-    position: relative;
-    max-width: 100%;
-    min-height: 20vh;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
+:root {
+    --blue: #142b6f;
+    --yellow : #ffd601;
+    --gray : #e1dee6;
+    --white: #ffffff;
 }
-.small-cont{
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+i{
+    cursor: pointer;
+} 
+header{
+        background-color: var(--white);
+        height: 16vh;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        border-bottom: 1px solid var(--gray);
+}
+.heading-strip{
     text-align: center;
-    width: 800px;
+    background-color: #ffd601;
+    height: 3vh; 
+    color: var(--white);
+} 
+.nav{
+height: 11vh;
+width: 100%;
+padding-bottom: 1.5%;
 }
-.content p{
-    font-size: 20px;
+.nav-brand {
+    font-size: 3em;
+    color: var(--blue);
+    font-family: 'Abril Fatface', cursive;
+    padding-left: 5%;
 }
-.content h3{
-    font-size: 35px;
+ul li {
+    font-family: 'Poppins', sans-serif;
+    padding: 4px;
     text-transform: uppercase;
-    margin-bottom: 30px;
+
 }
-.main-part{
-    min-height: 80vh;
-    background-color: rgb(220, 220, 220);
+ul li a{
+    color : var(--blue) !important;
+    font-size: 0.8em;
+}
+.icon{
+    font-size: 1.2em;
+}
+.btn-blue {
+    background-color: var(--blue);
+    color : var(--white);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 3%;
+    width: 50%;
+    font-weight: bolder;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Start of contact page code */
+.contact-bg{
+    margin-top: 110px;
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./wicker-fasunglases.jpg);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: var(--white);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.contact-section{
-    width: 100%;
+.contact-bg h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.contact-bg h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: var(--blue);
+    border-radius: 5px;
+}
+.line{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-.contact-info{
-    max-width: 500px;
-    line-height: 65px;
-    padding-left: 50px;
-    font-size: 18px;
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: var(--blue);
+    border-radius: 50%;
 }
-.contact-info i{
-    margin-right: 20px;
-    font-size: 25px;
+.text{
+    font-weight: 300;
+    opacity: 0.9;
 }
+.contact-bg .text{
+    margin: 1.6rem 0;
+    text-align: center;
+}
+.contact-body{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
 .contact-form{
-    max-width: 700px;
-    margin-right: 50px;
+    padding: 2rem 0;
+    border-top: 1px solid #d4d1d1;
+    width: 50%;
 }
-.contact-info, .contact-form{
-    flex: 1;
+.contact-form form{
+    padding-bottom: 1rem;
 }
-.contact-form h2{
-    text-align: center;
-    font-size: 35px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-.text-box{
-    border: none;
-    width: calc(50% - 10px);
-    height: 50px;
-    padding: 12px;
-    font-size: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-.text-box:first-child{
-    margin-right: 15px;
-}
-textarea{
-    border: none;
+
+.check-input{
     width: 100%;
-    padding: 12px;
-    font-size: 15px;
-    min-height: 200px;
-    max-height: 400px;
-    resize: vertical;
     border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background: hsl(0, 0%, 91%);
+    color: black;
+    border: none;
+}
+
+.check-input:focus{
+    box-shadow: 0 0 6px -3px hsl(0, 0%, 30%);
+}
+.contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
 }
 .send-btn{
-    float: left;
-    width: 80%;
-    border: none;
-    height: 40px;
-    background-color: rgba(47, 83, 225, 0.523);
-    font-size: 15px;
-    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #fff;
+    background: var(--blue);
+    border: none;
     border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 50%;
 }
 .send-btn:hover{
-    background-color: rgb(83, 147, 207);
+    background: hsl(219, 52%, 47%);
+    color: white;
 }
-@media screen and (max-width: 950px){
-    .contact-section{
-        flex-direction: column;
+.status-part{
+    display: flex;
+    flex-direction: row;
+}
+.status{
+    color: hsl(219, 52%, 47%);
+    margin-left: 30px;
+    display: none;
+}
+
+.contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+}
+/*------------------Footer--------------------*/
+footer{
+    background-color: var(--yellow);
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+
+}
+.social-media-section{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media-section i {
+    font-size: 2em;
+    margin: 0.5em;
+    color: var(--blue);
+
+}
+.footer-links{
+    font-weight: 500;
+    color: var(--blues);
+}
+.footer-links ul li {
+    color: var(--blue)
+}
+.footer-logo div{
+    font-size: 3em;
+    color: var(--blue);
+    font-family: 'Abril Fatface', cursive;
+}
+@media screen and (max-width: 768px){
+    .contact-bg .text{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .contact-info, .contact-form{
-        margin: 30px 50px;
+    .contact-info{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-gap: 16px;
+        align-items: center;
     }
-    .contact-form h2{
-        font-size: 30px;
-    }
-    .contact-form .text-box{
+    .send-btn{
         width: 100%;
     }
+    .status-part{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column;
+        height: fit-content;
+      }
+}
+
+@media screen and (min-width: 992px){
+    .contact-bg .text{
+        width: 100%;
+    }
+    .send-btn{
+        width: 100%;
+    }
+    .status-part{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .contact-info{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .send-btn{
+        width: 100%;
+    }
+    .status-part{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:567px){
+    .contact-form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    } 
+    .send-btn{
+        width: 100%;
+    }
+    .status-part{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column;
+        height: fit-content;
+      }
 }
