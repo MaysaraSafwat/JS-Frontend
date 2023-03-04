@@ -132,9 +132,9 @@ let isInCart =  cart? cart.find(e=> e.id == product.id) : false;
 
 let productContainer = document.getElementById('product-container');
 let productCard = document.createElement("a")
-  productCard.href = "#"
     productCard.onclick = function (){
 		localStorage.setItem("chosenProduct", JSON.stringify(product))
+		productCard.setAttribute("href", "./product_details/products.html")
 	}
     productCard.classList.add("product-card")
 let userImg = document.createElement("img")
@@ -150,18 +150,30 @@ let addToCartBtn = document.createElement("button");
    addToCartBtn.innerHTML=`${buttonTxt}`
    addToCartBtn.classList.add("btn-blue")
    //add to cart functionality
-   addToCartBtn.onclick = function(){
+   addToCartBtn.onclick = function(e){
+	if(isAuth){
 	 addToCart(product)
      	addToCartBtn.innerHTML="in cart!"
 		addToCartBtn.style.opacity = "0.5"
+	} 
+	else {
+		console.log("goto login")
+	}
+	e.stopPropagation()
    }
 
  let favBtn = document.createElement("button")
      favBtn.innerHTML='<i class="fa-regular fa-heart"></i>'
 	 //favorite button functionality
-	 favBtn.addEventListener("click", function(){
+	 favBtn.addEventListener("click", function(e){
+		if(isAuth){
+          
 		favBtn.innerHTML='<i class="fa-solid fa-heart"></i>'
 		addToFavs(product)
+		}else{
+			console.log("goto login")
+		}
+		e.stopPropagation();
 	 })
 	 buttonsContainer.append(addToCartBtn);
 	 buttonsContainer.append(favBtn)
@@ -211,9 +223,10 @@ function handleCartClick(){
 	let cartIcon = document.querySelector("#cart-icon a") 
 	if(isAuth){
 		//change with cart path
-		cartIcon.setAttribute("href", "./profile/profile.html")
+		cartIcon.setAttribute("href", "../cart/cart.html")
 	}else {
 		//change with login path
-		cartIcon.setAttribute("href", "./profile/profile.html")
+		//cartIcon.setAttribute("href", "./profile/profile.html")
+		console.log("not signed in yet")
 	}
 }

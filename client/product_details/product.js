@@ -1,3 +1,5 @@
+
+
 //image slider
 var ProductImg = document.getElementById("ProductImg");
         var SmallImg= document.getElementsByClassName("small-img");
@@ -26,6 +28,8 @@ SmallImg[0].setAttribute('src',`../${product.img}`);
 SmallImg[1].setAttribute('src',`../${product.img}`);
 SmallImg[2].setAttribute('src',`../${product.img}`);
 SmallImg[3].setAttribute('src',`../${product.img}`);
+
+
 
 /*********************************************************************************************************************/
 //descrition(+,-)
