@@ -9,8 +9,10 @@ section{
     margin-top: 16vh;
 }
 section .left {
-    width:70%;
+    width:50%;
     text-align: center;
+    margin: 5% auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 section .right {
     width: 30%;
@@ -19,10 +21,31 @@ section .right {
     border: 2px solid gray;
     border-radius: 20px;
     margin: 2%;
+    height: 600px;
+    overflow-y: scroll;
 }
 p {
     color: var(--blue);
 }
+@media (max-width: 780px) {
+    section{
+        flex-direction: column;
+    }
+    section .left {
+        width:90%;
+        text-align: center;
+    }
+    section .right {
+        width: 90%;
+        text-align: center;
+        padding: 2%;
+        border: 2px solid gray;
+        border-radius: 20px;
+        margin: 2%;
+        height: 400px;
+        overflow-y: scroll;
+    }
+   }
 .fav-card {
     display: block;
     padding-bottom: 2%;
@@ -57,4 +80,22 @@ p {
     padding: 2% 0;
     font-family: "Poppins", sans-serif;
     text-align: start;
+}
+#card-body {
+    padding-left :6%;
+
+}
+#card-body h4{
+ padding: 2%;
+
+}
+#card-body p{
+    padding: 2%;
+    line-height: 2em;
+    font-size: 1.1em;
+
+}
+#card-body a{
+    padding: 2%;
+    display: inline;
 }

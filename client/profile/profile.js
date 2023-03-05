@@ -1,16 +1,17 @@
-let user =  {
-    "name" : "Jane Doe",
-    "email": "Janedoe@gmail.com",
-    "number": "+2015252555",
-    "avatar": "https://img.freepik.com/free-photo/close-up-portrait-smiling-young-woman-looking-camera_171337-17994.jpg?w=1060&t=st=1677586960~exp=1677587560~hmac=f6aabe2f9ea2d34174bef4c15e7d289791ef8244478ac1b785584c1e2fe19f39"
-} 
-
+let user = JSON.parse(localStorage.getItem("currentUser")) || []
+console.log(user[0][0])
 let favedProducts =  JSON.parse(localStorage.getItem("favoriteProducts"));
 console.log(favedProducts);
 
+let username = document.getElementById("card-name")
+let useremail = document.getElementById ("card-email");
+let usernumber  = document.getElementById("card-number")
 
-
-
+if(user.length !=0) {
+	username.innerHTML = `${user[0][0].fname}`
+	useremail .innerHTML= `<i class="fa-solid fa-envelope"></i>   ${user[0][0].email}`
+	usernumber.innerHTML = `<i class="fa-solid fa-phone"></i>  ${user[0][0].number}`
+}
 
 function renderFavorites(){
     if(favedProducts){
