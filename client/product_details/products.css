@@ -315,24 +315,16 @@ h6 ,  .b{
     margin-top: 5px;
 }
 
-<<<<<<< HEAD
-
-@media screen and (max-width:800px){
-=======
 @media screen and (max-width:800px){
     *{
         font-size: 19px;
         margin: 0;
     }
->>>>>>> habiba
     .section-p1{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-<<<<<<< HEAD
-}
-=======
     #prodetails{
         margin:auto;
     }
@@ -399,4 +391,3 @@ h6 ,  .b{
         height: fit-content;
       }
 }
->>>>>>> habiba
