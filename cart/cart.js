@@ -40,6 +40,7 @@ function generateCartItems() {
       //========================================GO TO HOME========================
   } else {
     ShoppingCart.innerHTML = ``;
+    label.style.height ="60vh"
     label.innerHTML = `
        <h2>Cart is Empty</h2>
        <a href="../client/index.html">
