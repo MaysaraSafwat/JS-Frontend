@@ -37,7 +37,11 @@
                 <div class="brand nav-brand w-30"><a href="../index.html">W&S</a></div>
                 <ul class="navbar-nav  w-100 justify-content-end" style="max-width: 80%; margin: 0 auto">
                     <li class="nav-item">
+<<<<<<< HEAD
                       <a class="nav-link active" aria-current="page" href="../index.html#products">Products</a>
+=======
+                      <a class="nav-link active" aria-current="page" href="../client/index.html">Products</a>
+>>>>>>> habiba
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../client/about/about.html">About</a>
@@ -50,19 +54,17 @@
                     <li class="nav-item">
                        <button onclick="clearCart()" class="removeAll">Clear Cart</button>
                     </li>
-                    <li class="nav-item">
-                         <div class="cart">
-                              <i class="bi bi-cart2"></i>
-                              <div id="cartAmount" class="cartAmount">0</div>
-                              </div>
+                    <li id="cart-icon" class="nav-item" onclick="handleCartClick()" style="position: relative;">
+                      <span id="cart-counter" style="height: 20px; width: 20px; border-radius: 50%;">0</span>
+                      <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping icon"></i></a>
                     </li>
-                    <li id="logout-icon" class="nav-item d-flex">
-                      <a class="nav-link" href="./profile/profile.html">
+                    <li id="logout-icon" class="nav-item">
+                      <a class="nav-link" href="">
                           <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
                       </a>
                     </li>
                     <li id="profile-icon" class="nav-item">
-                      <a class="nav-link" href="profile/profile.html">
+                      <a class="nav-link" href="../client/profile/profile.html">
                         <i class="fa-solid fa-user"></i>
                       </a>
                     </li>

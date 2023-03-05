@@ -62,6 +62,22 @@ ul li a{
     font-family: "Poppins", sans-serif;
 }
 
+#cart-counter {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    margin: 0;
+    position: absolute;
+    top: -15%;
+    left: 35%;
+    text-align: center;
+    color: white;
+  }
+  .hide {
+    display: none !important;
+  }
 /*End of Nav bar Style*/
 /* about */
 #about{
