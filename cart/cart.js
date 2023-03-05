@@ -138,11 +138,11 @@ function TotalAmount() {
     label.innerHTML = ` 
     <h2> Cart Total</h2>
     <div >
-    <h4>Total Bill  :  ${amount}</h4>
+    <h4>Total Bill  : $${amount}</h4>
     </div>
     <div class="button_cart" >
     <button  class="gotohome"> <a href="../client/index.html"<i class="bi bi-arrow-left arrow"> continue shopping</i></a> </button>
-    <button   class="checkout"> proceed Checkout</button>
+    <button   class="checkout""> <a href="../client/orderDetails/orderdetails.html" style="text-decoration:none; color:white"> Proceed Checkout</a></button>
      <div>
     `;
   } else

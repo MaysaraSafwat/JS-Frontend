@@ -81,7 +81,7 @@ for(let i=0 ; i<=basket.length;i++){
     productCard.innerHTML+=`
         <div class="card">
         <div class="img-box">
-            <img src="${basket[i].img}" alt="Watch" width="80px" class="product-img">
+            <img src="../${basket[i].img}" alt="Watch" width="80px" class="product-img">
         </div>
         <div class="detail">
             <h4 class="product-name">${basket[i].name}</h4>
