@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root {
+    --blue: #142b6f;
+    --yellow : #ffd601;
+    --gray : #e1dee6;
+    --white: #ffffff;
+}
+i{
+    cursor: pointer;
+} 
+header{
+        background-color: var(--white);
+        height: 16vh;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        border-bottom: 1px solid var(--gray);
+}
+.heading-strip{
+    text-align: center;
+    background-color: #ffd601;
+    height: 3vh; 
+    color: var(--white);
+} 
+.nav{
+height: 11vh;
+width: 100%;
+padding-bottom: 1.5%;
+}
+.nav-brand {
+    font-size: 3em;
+    color: var(--blue);
+    font-family: 'Abril Fatface', cursive;
+    padding-left: 5%;
+}
+ul li {
+    font-family: 'Poppins', sans-serif;
+    padding: 4px;
+    text-transform: uppercase;
+
+}
+ul li a{
+    color : var(--blue) !important;
+    font-size: 0.8em;
+}
+.icon{
+    font-size: 1.2em;
+}
+.btn-blue {
+    background-color: var(--blue);
+    color : var(--white);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 3%;
+    width: 50%;
+    font-weight: bolder;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
+
+/*End of Nav bar Style*/
+/* about */
+#about{
+    margin-top: 150px;
+}
+#about h1{
+    text-align: center;    
+    font-weight: bold;
+    color: var(--blue);
+}
+/* about */
+/* offer */
+#offer{
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    
+}
+
+#offer i{
+    font-size: 60px;
+    color: var(--blue);
+}
+/* offer */
+
+/* ============================================FOOTER SECTION===============*/
+footer{
+    background-color: var(--yellow);
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+
+}
+.social-media-section{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media-section i {
+    font-size: 2em;
+    margin: 0.5em;
+    color: var(--blue);
+
+}
+.footer-links{
+    font-weight: 500;
+    color: var(--blues);
+}
+.footer-links ul li {
+    color: var(--blue)
+}
+.footer-logo div{
+    font-size: 3em;
+    color: var(--blue);
+    font-family: 'Abril Fatface', cursive;
+}
+
+            /* Responsive */
+@media screen and (max-width:1200px) {
+    #about{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        margin-top: 250px;
+    }
+
+    #about p{
+        font-size: 18px;
+    }
+
+    .col-md-5 .py-3 .py-md-0{ 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    }  
+   
+
+    footer{
+        flex-direction: column;
+        height: fit-content;
+      }
+}
+@media screen and (max-width:800px){
+    #about{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .col-md-5 .py-3 .py-md-0{ 
+        display: flex !important;
+        flex-direction: co !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    } 
+    footer{
+        flex-direction: column;
+        height: fit-content;
+      }
+
+}
