@@ -28,7 +28,7 @@
 
 </style>
 </head>
-<body onload="renderFavorites()">
+<body onload="onPageLoad()">
    
        <header class="fixed-top"style="background-color: white">
         <div class="heading-strip">
@@ -51,12 +51,18 @@
                   <li class="nav-item">
                     <a class="nav-link" href="../contact-us/contactUs.html">Contact us</a>
                   </li>
-                  <li class="nav-item">
+                  <li id="cart-icon" class="nav-item" onclick="handleCartClick()" style="position: relative;">
+                    <span id="cart-counter" style="height: 20px; width: 20px; border-radius: 50%;">0</span>
                     <a class="nav-link"><i class="fa-solid fa-cart-shopping icon"></i></a>
                   </li>
-                  <li class="nav-item d-flex">
-                    <a class="nav-link">
+                  <li id="logout-icon" class="nav-item">
+                    <a class="nav-link" href="">
                         <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                    </a>
+                  </li>
+                  <li id="profile-icon" class="nav-item">
+                    <a class="nav-link" href="../client/profile/profile.html">
+                      <i class="fa-solid fa-user"></i>
                     </a>
                   </li>
                 </ul> 
@@ -110,8 +116,10 @@
  <!-- END FOOTER SECTION -->
     <!-- <script src="../app.js">
     </script> -->
+    
         <script src="./profile.js">
         </script>
+        <script src="../auth/auth.js"></script>
    
 </body>
 </html>

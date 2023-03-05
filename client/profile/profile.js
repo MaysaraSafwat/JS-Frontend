@@ -12,7 +12,27 @@ if(user.length !=0) {
 	useremail .innerHTML= `<i class="fa-solid fa-envelope"></i>   ${user[0][0].email}`
 	usernumber.innerHTML = `<i class="fa-solid fa-phone"></i>  ${user[0][0].number}`
 }
+function onPageLoad (){
+    if(favedProducts.length !== 0){
+		renderFavorites()
+	}
+	else{
+		let favSection = document.querySelector(".right")
+		let title = document.querySelector(".right h2")
+		let favConatiner = document.querySelector("#favs-container")
+		let goHomeBtn  = document.createElement("a");
+		goHomeBtn.classList.add("btn-blue")
+		goHomeBtn.style.textDecoration = "none"
+		goHomeBtn.style.padding = "3% 6%"
 
+		goHomeBtn.setAttribute("href" , "../index.html")
+		goHomeBtn.innerHTML= "Go shopping"
+		favConatiner.style.display ="none";
+		title.innerHTML = "you didn't  favorite any products yet"
+		console.log("there's no favs")
+		favSection.append(goHomeBtn)
+	}
+}
 function renderFavorites(){
     if(favedProducts){
         favedProducts.map(e=>{
