@@ -1,0 +1,213 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    position: relative;
+   }
+
+  .cont {
+    margin: 10px solid black;
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-content: space-around;
+    justify-content: space-around;
+    
+  
+  }
+  
+  .body:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('./watch1hero.jpg');
+    background-position: 10   0% 100%;
+    background-size: cover;
+
+  }
+  
+    /* donot have accout*/
+
+  .backbox{  
+    background-color:  #142B6F;  
+    border-radius: 20px;
+    width: 94%;
+    height: 66%;
+    position: absolute;
+    transform: translate(0,-50%);
+    top:50%;
+    display: inline-flex;
+  }
+  /* donot have accout*/
+  .backbox {
+    background-color: #142B6F;
+    width: 94%;
+    height: 66%;
+    transform: translate(0,-50%);
+    top: 51%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    align-content: stretch;
+  }
+
+  .frontbox{
+    border-radius: 20px;
+    height: 75%;
+    width: 50%;
+    z-index: 10;
+    position: absolute;
+    right:0;
+    margin: 23% 2%;
+    transition: right .8s ease-in-out;
+  }
+  .frontbox {
+    background-color: white;
+    border-radius: 20px;
+    height: 58%;
+    width: 45%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    margin: 15% 5%;
+    transition: right .8s ease-in-out;
+}
+  .moving{
+    right:45%;
+  }
+  
+  .loginMsg, .signupMsg{
+    width: 50%;
+    height: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  
+  .loginMsg .title,
+  .signupMsg .title{
+    font-weight: 300;
+    font-size: 23px;
+  }
+  
+  .loginMsg p,
+  .signupMsg p {
+    font-weight: 100;
+  }
+  
+  .textcontent{
+    color:white;
+    margin-top:65px;
+    margin-left: 12%;
+  }
+  
+  .loginMsg button,
+  .signupMsg button {
+    background-color:  #142B6F;  
+    border: 2px solid white;
+    border-radius: 10px;
+    color:white;
+    font-size: 12px;
+    box-sizing: content-box;
+    font-weight: 300;
+    padding:10px;
+    margin-top: 20px;
+  }
+  
+  /* front box content*/
+  .login, .signup{
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .login h2,
+  .signup h2 {
+    color:#FFD601;
+    font-size:22px;
+  }
+  
+  .inputbox{
+    margin-top:30px; 
+  }
+  .login input, 
+  .signup input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #f2f2f2;
+    border: none;
+    margin-bottom:20px;
+    font-size: 12px;
+  }
+  
+  .login button,
+  .signup button{
+    background-color:#FFD601;
+    border: none;
+    color:white;
+    font-size: 12px;
+    font-weight: 300;
+    box-sizing: content-box;
+    padding:10px;
+    border-radius: 10px;
+    width: 60px;
+    position: absolute;
+    right:30px;
+    bottom: 30px;
+    cursor: pointer;
+  }
+  
+  /* Fade In & Out*/
+  .login p {
+    cursor: pointer;
+    color: #142B6F;  
+    font-size:15px;
+  }
+  
+  .loginMsg, .signupMsg{
+    /*opacity: 1;*/
+    transition: opacity .8s ease-in-out;
+  }
+  
+  .visibility{
+    opacity: 0;
+  }
+  
+  .hidden{
+    display: none !important;
+  }
+  
+  #footer {
+    position: fixed;
+    height: 20vh;
+   
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--yellow);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    }
+   /* 
+@media (max-width: 780px) {
+    
+     .frontbox{
+        margin: 15% 5% !important;
+    }
+   }
+ @media (max-width: 580px) {
+  
+    .frontbox{
+        margin: 15% 5% !important;
+    }
+   }
+   */
