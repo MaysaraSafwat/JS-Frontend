@@ -88,9 +88,12 @@ var modal = document.getElementById("myModal");
             modal2.style.display = "none";
         }
     }
-
-    function addToCart(product) {
-        //get cart
+let addTocartBtn =  document.getElementById("addtocart")
+   addTocartBtn.addEventListener("click", ()=> {
+    addToCart()
+     addTocartBtn.innerHTML="Added to cart!"
+   })
+    function addToCart() {
         var cart = JSON.parse(localStorage.getItem("cart"));
         if(cart == null) cart = [];
         //check if item is aleady in carta nd if not add it
@@ -104,3 +107,21 @@ var modal = document.getElementById("myModal");
         }
     
     };
+    let favBtn = document.getElementById("favbtn")
+      favBtn.addEventListener("click", ()=>{
+        addToFavs()
+        favBtn.innerHTML = '<i class="fa-solid fa-heart"></i>'
+      })
+    function addToFavs (){
+        let favs = JSON.parse(localStorage.getItem("favoriteProducts"));
+        if(favs == null) favs = [];
+        if(favs.find(e=> e.id == product.id)){
+            console.log("aleady in favorites")
+        }else {
+            localStorage.setItem("fP", JSON.stringify(product));
+           favs.push(product);
+            localStorage.setItem("favoriteProducts", JSON.stringify(favs));
+            console.log(favs)
+        }
+    }
+    
