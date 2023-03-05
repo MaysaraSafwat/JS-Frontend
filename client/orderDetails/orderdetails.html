@@ -11,10 +11,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@1,200;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="./order.css"/>
        <title>Check Out</title>
-       <link
-       rel="stylesheet"
-       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-     />
      <link
        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
        rel="stylesheet"
@@ -30,6 +26,8 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
    
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
 
     </head>
     <body>
@@ -89,91 +87,53 @@
                                 <ion-icon class="checkmark" name="checkmark-circle"></ion-icon>
                             </button>
                         </div>
-                        <form action="#">
+                        <form action="#" id="card-valid" onsubmit="sub()">
 
                             <div class="cardholder-name">
                                 <label for="cardholder-name" class="label-default">Cardholder name</label>
-                                <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                                <input type="name" name="name" id="cardholder-name"  class="input-default" maxlength="30" placeholder="Name On Credit" required>
+                                <p class="alert" id="name-err">Name Can't contain numbers & Write Full name on card </p>
                             </div>
 
                             <div class="card-number">
                                 <label for="card-number" class="label-default">Card number</label>
-                                <input type="number" name="card-number" id="card-number" class="input-default">
+                                <input type="text" name="cardnumber" id="cardnumber" class="input-default" max="16" placeholder="xxxx-xxxx-xxxx-xxxx" >
+                                <p class="alert" id="numb-err">Must write 16 number of credit & only numbers</p>
                             </div>
 
                             <div class="input-flex">
                                 <div class="expire-date">
                                     <label for="expire-date" class="label-default">Expiration date</label>
                                     <div class="input-flex">
-                                        <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31" class="input-default">
+                                        <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31" class="input-default" >
                                         /
-                                        <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12" class="input-default">
+                                        <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12" class="input-default" >
 
                                     </div>
                                 </div>
 
                                 <div class="cvv">
                                     <label for="card-number" class="label-default">CVV</label>
-                                    <input type="number" name="cvv" id="cvv" class="input-default">
+                                    <input type="number" name="cvv" id="cvv" class="input-default" placeholder="xxx" maxlength="4" required>
+                                    <p class="alert" id="cvv-err">you can only write 3 or 4 numbers</p>
                                 </div>
-
+                               
                             </div>
+                            <br>
+                            <button class="btn-submit" >
+                                Pay
+                            </button>
                         </form>
                     </div>
 
-                    <button class="btn-submit">
-                        Pay
-                    </button>
+
                 </section>
                 <!-- Cart section -->
                 <section class="cart">
                     <div class="cart-item-box">
                         <h2 class="section-heading">Order Summery</h2>
                         <div class="product-card">
-                            <div class="card">
-                                <div class="img-box">
-                                    <img src="./images/watch.jpg" alt="Watch" width="80px" class="product-img">
-                                </div>
-                                <div class="detail">
-                                    <h4 class="product-name">Casio Watch</h4>
-                                    <div class="wrapper">
-                                        <div class="product-qty">
-                                            <p>Quantity: <span id="quantity">1</span></p>                                            
-                                        </div>
-
-                                        <div class="price">
-                                            <p>Price:  $<span id="price">1.25</span></p> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="product-close-btn">
-                                    <ion-icon name="close-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="card">
-                                <div class="img-box">
-                                    <img src="./images/watch0.jpg" alt="watch2" width="80px" class="product-img">
-                                </div>
-                                <div class="detail">
-                                    <h4 class="product-name">Watch</h4>
-                                    <div class="wrapper">
-                                        <div class="product-qty">
-                                            <p>Quantity: <span id="quantity">1</span></p>                                            
-                                        </div>
-
-                                        <div class="price">
-                                          <p>Price:  $<span id="price">1.25</span></p> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="product-close-btn">
-                                    <ion-icon name="close-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
+                          
                     </div>
 
                     <div class="wrapper">
@@ -186,9 +146,9 @@
                         </div>
 
                         <div class="amount">
-                            <div class="subtotal">
+                            <!-- <div class="subtotal">
                                 <span>Subtotal</span> <span>$ <span id="subtotal">2.05</span></span>
-                            </div>
+                            </div> -->
 
                             <div class="tax">
                                 <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
@@ -199,7 +159,7 @@
                             </div>
 
                             <div class="total">
-                                <span>Total</span> <span>$ <span id="total">2.15</span></span>
+                                
                             </div>
                         </div>
                     </div>

@@ -197,6 +197,20 @@ input::--webkit-outer-spin-button{
     align-items: center;
     gap: 30px;
 }
+.alert{
+    display: none;
+    font-size: 14px;
+    margin-left: 2%;
+}
+.valid {
+    border-color: #36cc36;
+}
+.invalid {border-color:orange}
+input.invalid + p {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
+}
 .input-flex .expire-date,.input-flex .cvv{
     width: 50%;
 }
@@ -269,6 +283,9 @@ input::--webkit-outer-spin-button{
     margin-top: 20px;
     gap: 20px;
 }
+.product-name{
+    width: 80%;
+}
 .product-qty{
     display: flex;
     align-items: center;
@@ -278,15 +295,7 @@ input::--webkit-outer-spin-button{
 .price{
     font-size: 20px;
 }
-/* pluse and - buttons style*/
-/* .product-qty button{
-    background: hsl(0, 0%, 91%);
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+
 .product-qty button:active, .product-close-btn:active ion-icon{
     transform: scale(0.95);
 }
