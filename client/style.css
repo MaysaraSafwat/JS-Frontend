@@ -34,6 +34,13 @@ header{
     font-family: 'Abril Fatface', cursive;
     padding-left: 5%;
 }
+.nav-brand a{
+  text-decoration: none;
+  color: var(--blue);
+}
+.nav-brand a:hover{
+  color: var(--blue);
+}
 ul li {
     font-family: 'Poppins', sans-serif;
     padding: 4px;
