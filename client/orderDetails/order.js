@@ -54,7 +54,6 @@ cvv.addEventListener('input',function(e){
 function JSalert(e){
     e.preventDefault();
     swal("Congrats!", " Your Order is onway!", "success");
-    
        
 }
 
