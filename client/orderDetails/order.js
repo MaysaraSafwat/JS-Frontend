@@ -95,9 +95,6 @@ for(let i=0 ; i<=basket.length;i++){
                 </div>
             </div>
         </div>
-        <button class="product-close-btn">
-            <ion-icon name="close-outline"></ion-icon>
-        </button>
         </div>
 `;
 total.innerHTML=`<span>Total</span> <span>$ <span id="total">${totalPrice}</span></span>`;

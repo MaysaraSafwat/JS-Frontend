@@ -202,15 +202,7 @@ input::--webkit-outer-spin-button{
     font-size: 14px;
     margin-left: 2%;
 }
-.valid {
-    border-color: #36cc36;
-}
-.invalid {border-color:orange}
-input.invalid + p {
-    opacity: 1;
-    height: auto;
-    margin-bottom: 20px;
-}
+
 .input-flex .expire-date,.input-flex .cvv{
     width: 50%;
 }
@@ -284,7 +276,7 @@ input.invalid + p {
     gap: 20px;
 }
 .product-name{
-    width: 80%;
+    width: 90%;
 }
 .product-qty{
     display: flex;
@@ -295,15 +287,7 @@ input.invalid + p {
 .price{
     font-size: 20px;
 }
-
-.product-qty button:active, .product-close-btn:active ion-icon{
-    transform: scale(0.95);
-}
-.product-qty button ion-icon{
-    --ionicon-stroke-width: 60px;
-    font-size: 10px;
-}
-.product-close-btn{
+/* .product-close-btn{
     position: absolute;
     top: 0;
     right: 0;
@@ -315,7 +299,7 @@ input.invalid + p {
 }
 .product-close-btn:hover ion-icon{
     color: hsl(0,77%,60%);
-}
+} */
 
 /*part of discount*/
 .discount-token{
