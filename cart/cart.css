@@ -111,7 +111,16 @@ font-family: "Poppins", sans-serif;
     padding: 3px;
     border-radius: 2px;
   }
+  @media (max-width:800px){
+
+    .cart {
+   
+      width: 30px;
+    margin-top: 10px;
   
+    }
+
+  }
  /* ====================================================TABLE SECTION============================================================== */
  
 #cart_container{
