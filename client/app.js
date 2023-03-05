@@ -79,7 +79,7 @@ function loadJSON() {
 
 renderProducts()
 let counter = document.getElementById("cart-counter")
-counter.innerHTML=`${cart.length}`
+cart.length !==0 ?  counter.innerHTML=`${cart.length}` : counter.innerHTML="0"
  }
 
  //filtering products
