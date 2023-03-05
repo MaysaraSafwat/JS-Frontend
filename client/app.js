@@ -1,7 +1,3 @@
-//let path ="../data/products.json"
-let isAuth = false;
-let productsInCart =[]
-let cart= JSON.parse(localStorage.getItem('cart'));
 //===================================data section==============================================================
 let data = [
     {
@@ -59,13 +55,23 @@ let data = [
 		,"item":1
 	}
 ]
+let user = JSON.parse(localStorage.getItem("currentUser"))
+let isAuth = user ? true : false
+let productsInCart =[]
+let cart= JSON.parse(localStorage.getItem('cart'));
 
 let f =[]
 localStorage.setItem('products', JSON.stringify(data));
 localStorage.setItem("favoriteProducts", JSON.stringify(f));
-
+console.log(isAuth)
 let logout = document.getElementById("logout-icon");
-isAuth? logout.classList.remove("hide") : logout.classList.add("hide") ;
+let profile = document.getElementById("profile-icon")
+	isAuth? logout.classList.remove("hide") : logout.classList.add("hide") ;
+	isAuth? profile.classList.remove("hide") : profile.classList.add("hide") ;
+	logout.onclick = function () {
+		localStorage.removeItem("currentUser") 
+		this.classList.add("hide")
+	}
 //=========================================================================================================================================
 
 //rendering products on page load
