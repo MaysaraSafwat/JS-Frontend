@@ -2,8 +2,8 @@
 let data = [
     {
 		"id": 1,
-		"name": "GUESS GOLD TONESTAINLESS STEEL",
-		"price": "9999",
+		"name": "LEATHER GOLD TONESTAINLESS STEEL",
+		"price": "19000",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch.jpg",
 		"category": "watch"
@@ -29,8 +29,8 @@ let data = [
 	},
     {
 		"id": 4,
-		"name": "GUESS GOLD TONESTAINLESS STEEL",
-		"price": "9999",
+		"name": "ROLEX GOLD TONESTAINLESS STEEL",
+		"price": "22999",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch1.jpg",
 		"category": "watch"
@@ -38,8 +38,8 @@ let data = [
 	},
     {
 		"id": 5,
-		"name": "GUESS GOLD TONESTAINLESS STEEL",
-		"price": "9999",
+		"name": "GUESS SILVER TONESTAINLESS STEEL",
+		"price": "8999",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/watch2.jpg",
 		"category": "watch"
@@ -47,7 +47,7 @@ let data = [
 	},
 	{
 		"id": 6,
-		"name": "SUNGLASSES ULTRAVIOLET PROTECTION",
+		"name": "SHADES ULTRAVIOLET PROTECTION",
 		"price": "4000",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lorem eget diam dapibus, id molestie dui ultricies. Nam pulvinar euismod dolor, id blandit nisl aliquam vitae. Cras eu leo ut enim blandit iaculis in ut leo. Vestibulum eleifend at sapien sed maximus. Mauris ex lacus",
 		"img": "../assets/products-imgs/sunglasses1.jpg",
@@ -88,9 +88,10 @@ function displayFilter(){
   filtercheck.style.display = "flex"
 } 
 function handleFilterClick(f){
+	console.log(f)
 	switch(f) {
 		case "all":
-			renderProducts()
+			renderProducts("all")
 		  break;
 		case "watches":
 			renderProducts("watch");
@@ -100,7 +101,7 @@ function handleFilterClick(f){
 		break;
 		case "x" :
 			let filtercheck = document.querySelector(".filterForm");
-			filtercheck.style.display="none"
+			filtercheck.style.display="none";
         break;   		
 	 }
 }
@@ -111,20 +112,27 @@ console.log(cat)
 
 let data = JSON.parse(localStorage.getItem('products'));
 if(!cat){
+
 	data.map(el=>{
 		createProductCard(el)
 		 
 	 })
-} else  {
+} else if(cat == "all"){
 	let cards = document.querySelectorAll(".product-card")
 	cards.forEach(i=> i.remove())
-console.log(cards)
+	renderProducts();
+} 
+else  {
+	let cards = document.querySelectorAll(".product-card")
+	cards.forEach(i=> i.remove())
+    console.log(cards)
 	let filtered = []
 	data.map(el=>{
 		if(cat == el.category){
 			filtered.push(el)
 		}else{
-			filtered.push(el)
+			//filtered.push(el)
+			console.log(el)
 		}
 	})
 	console.log(filtered)
@@ -177,6 +185,7 @@ let addToCartBtn = document.createElement("button");
      favBtn.innerHTML='<i class="fa-regular fa-heart"></i>'
 	 //favorite button functionality
 	 favBtn.addEventListener("click", function(e){
+		e.stopPropagation()
 		if(isAuth){
           
 		favBtn.innerHTML='<i class="fa-solid fa-heart"></i>'
@@ -245,7 +254,7 @@ function handleCartClick(){
 //update cart counter
 function updateCartCounter() {
 	let counter = document.getElementById("cart-counter")
-	let items = Number(counter.html())+ 1;
+	let items = Number(counter.textContent)+ 1;
 	counter.innerHTML = `${items}`
 
 }
