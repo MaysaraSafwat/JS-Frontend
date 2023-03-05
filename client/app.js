@@ -1,5 +1,5 @@
 //let path ="../data/products.json"
-let isAuth = true;
+let isAuth = false;
 let productsInCart =[]
 let cart= JSON.parse(localStorage.getItem('cart'));
 //===================================data section==============================================================
@@ -157,7 +157,7 @@ let addToCartBtn = document.createElement("button");
 		addToCartBtn.style.opacity = "0.5"
 	} 
 	else {
-		console.log("goto login")
+		window.location.href="./sign_log/sign_log.html"
 	}
 	e.stopPropagation()
    }
@@ -171,7 +171,7 @@ let addToCartBtn = document.createElement("button");
 		favBtn.innerHTML='<i class="fa-solid fa-heart"></i>'
 		addToFavs(product)
 		}else{
-			console.log("goto login")
+			window.location.href="./sign_log/sign_log.html"
 		}
 		e.stopPropagation();
 	 })
@@ -225,8 +225,7 @@ function handleCartClick(){
 		//change with cart path
 		cartIcon.setAttribute("href", "../cart/cart.html")
 	}else {
-		//change with login path
-		//cartIcon.setAttribute("href", "./profile/profile.html")
+		cartIcon.setAttribute("href", "./sign_log/sign_log.html")
 		console.log("not signed in yet")
 	}
 }
