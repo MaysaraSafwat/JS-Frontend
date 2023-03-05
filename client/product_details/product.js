@@ -88,3 +88,19 @@ var modal = document.getElementById("myModal");
             modal2.style.display = "none";
         }
     }
+
+    function addToCart(product) {
+        //get cart
+        var cart = JSON.parse(localStorage.getItem("cart"));
+        if(cart == null) cart = [];
+        //check if item is aleady in carta nd if not add it
+        if(cart.find(e=> e.id == product.id)){
+            console.log("aleady in cart")
+        }else {
+            localStorage.setItem("cartProduct", JSON.stringify(product));
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            console.log(cart)
+        }
+    
+    };

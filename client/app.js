@@ -55,8 +55,6 @@ let data = [
 		,"item":1
 	}
 ]
-let user = JSON.parse(localStorage.getItem("currentUser"))
-let isAuth = user ? true : false
 let productsInCart =[]
 let cart= JSON.parse(localStorage.getItem('cart'));
 
@@ -64,19 +62,24 @@ let f =[]
 localStorage.setItem('products', JSON.stringify(data));
 localStorage.setItem("favoriteProducts", JSON.stringify(f));
 console.log(isAuth)
-let logout = document.getElementById("logout-icon");
-let profile = document.getElementById("profile-icon")
-	isAuth? logout.classList.remove("hide") : logout.classList.add("hide") ;
-	isAuth? profile.classList.remove("hide") : profile.classList.add("hide") ;
-	logout.onclick = function () {
-		localStorage.removeItem("currentUser") 
-		this.classList.add("hide")
-	}
+// let user = JSON.parse(localStorage.getItem("currentUser"))
+// let isAuth = user ? true : false
+// let logout = document.getElementById("logout-icon");
+// let profile = document.getElementById("profile-icon")
+// 	isAuth? logout.classList.remove("hide") : logout.classList.add("hide") ;
+// 	isAuth? profile.classList.remove("hide") : profile.classList.add("hide") ;
+// 	logout.onclick = function () {
+// 		localStorage.removeItem("currentUser") 
+// 		this.classList.add("hide")
+// 	}
 //=========================================================================================================================================
 
 //rendering products on page load
 function loadJSON() {
+
 renderProducts()
+let counter = document.getElementById("cart-counter")
+counter.innerHTML=`${cart.length}`
  }
 
  //filtering products
@@ -87,7 +90,7 @@ function displayFilter(){
 function handleFilterClick(f){
 	switch(f) {
 		case "all":
-			renderProducts(true)
+			renderProducts()
 		  break;
 		case "watches":
 			renderProducts("watch");
@@ -105,6 +108,7 @@ function handleFilterClick(f){
 
 function renderProducts(cat) {
 console.log(cat)
+
 let data = JSON.parse(localStorage.getItem('products'));
 if(!cat){
 	data.map(el=>{
@@ -157,6 +161,7 @@ let addToCartBtn = document.createElement("button");
    addToCartBtn.classList.add("btn-blue")
    //add to cart functionality
    addToCartBtn.onclick = function(e){
+	e.stopPropagation()
 	if(isAuth){
 	 addToCart(product)
      	addToCartBtn.innerHTML="in cart!"
@@ -179,7 +184,7 @@ let addToCartBtn = document.createElement("button");
 		}else{
 			window.location.href="./sign_log/sign_log.html"
 		}
-		e.stopPropagation();
+		//e.stopPropagation();
 	 })
 	 buttonsContainer.append(addToCartBtn);
 	 buttonsContainer.append(favBtn)
@@ -206,6 +211,7 @@ function addToCart(newCartProduct) {
 		cart.push(newCartProduct);
 		localStorage.setItem("cart", JSON.stringify(cart));
 		console.log(cart)
+		updateCartCounter(cart)
 	}
 
 };
@@ -234,4 +240,12 @@ function handleCartClick(){
 		cartIcon.setAttribute("href", "./sign_log/sign_log.html")
 		console.log("not signed in yet")
 	}
+}
+
+//update cart counter
+function updateCartCounter() {
+	let counter = document.getElementById("cart-counter")
+	let items = Number(counter.html())+ 1;
+	counter.innerHTML = `${items}`
+
 }
