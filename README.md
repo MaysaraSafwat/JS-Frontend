@@ -32,7 +32,7 @@ We used LocalStorage to store data of The items That we offer.you can Add item t
 Also you can see all information about product in product Details. At the end of your journey, you can go to checkout page to confirm your order and to pay with your Credit card.
 
 # Project Demo
-[!Click here](https://www.loom.com/share/7a378db81cfa4d03bee4dcf33faeb78e)
+[!Click here](https://www.loom.com/share/7a378db81cfa4d03bee4dcf33faeb78e) To watch Demo for Our website.
 
 ## Installation
 
