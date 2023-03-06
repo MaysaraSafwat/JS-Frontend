@@ -59,7 +59,14 @@ function increment(id) {
   //console.log(id)
   let search = basket.find((x) => x.id === id);
   
+    if (search === undefined) {
+    basket.push({
+      id: id,
+      item: 1,
+    });
+  } else {
     search.item += 1;
+  }
  
   generateCartItems();
   update(id);
@@ -73,7 +80,13 @@ function decrement(id) {
   let search = basket.find((x) => x.id === id);
 //console.log(id)
  
+    if (search === undefined)
+    return;
+  else if (search.item === 0)
+    return;
+  else {
     search.item -= 1;
+    }
   
   update(id);
  // console.log(search.item)
