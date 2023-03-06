@@ -60,14 +60,11 @@ generateCartItems();
 function increment(id) {
   //console.log(id)
   let search = basket.find((x) => x.id === id);
-  if (search === undefined) {
-    bask.push({
-      id: id,
-      item: 1,
-    });
-  } else {
+  
+   
     search.item += 1;
-  }
+ 
+ 
   generateCartItems();
   update(id);
   localStorage.setItem("cart", JSON.stringify(basket));
@@ -79,13 +76,11 @@ function increment(id) {
 function decrement(id) {
   let search = basket.find((x) => x.id === id);
 //console.log(id)
-  if (search === undefined)
-    return;
-  else if (search.item === 0)
-    return;
-  else {
+ 
+  
     search.item -= 1;
-    }
+    
+  
   update(id);
  // console.log(search.item)
   basket = basket.filter((x) => x.item >0);
