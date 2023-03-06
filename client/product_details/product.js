@@ -34,6 +34,11 @@ var ProductDes = document.getElementById("demo");
 ProductTitle.innerHTML = `${product.name}`;
 ProductPrice.innerHTML = "$"+`${product.price}`;
 ProductDes.innerHTML = `${product.description}`;
+
+let cart = JSON.parse(localStorage.getItem("cart"))
+let items =  cart.length;
+let padge = document.getElementById("cart-counter");
+padge.innerHTML = `${items}`
 /*********************************************************************************************************************/
 //descrition(+,-)
 function appears(){

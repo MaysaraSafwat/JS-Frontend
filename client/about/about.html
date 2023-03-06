@@ -141,6 +141,12 @@
         <!--End Footer-->
 
 <script src="../auth/auth.js"></script>
+<script>
+   let cart = JSON.parse(localStorage.getItem("cart"))
+      let items =  cart.length;
+     let padge = document.getElementById("cart-counter");
+   padge.innerHTML = `${items}`
+</script>
     </body>
 
 </html>

@@ -6,6 +6,12 @@ var numbErr = document.getElementById("numb-err");
 var cvv = document.getElementById("cvv");
 var cvvErr = document.getElementById("cvv-err");
 
+
+let cart = JSON.parse(localStorage.getItem("cart"))
+let items =  cart.length;
+let padge = document.getElementById("cart-counter");
+padge.innerHTML = `${items}`
+
 cardValid.addEventListener('submit',JSalert,false);
 
  cardName.addEventListener('input',function(e){
@@ -53,7 +59,15 @@ cvv.addEventListener('input',function(e){
 
 function JSalert(e){
     e.preventDefault();
-    swal("Congrats!", " Your Order is onway!", "success");
+    //swal("Congrats!", " Your Order is onway!", "success");
+    swal({
+        title: "Wow!",
+        text: "Your Order is onway",
+        type: "success",
+        confirmButton: false,
+        html:
+    '<a href="../index.html" class="success-modal-btn">Go Home</a> '
+    })
        
 }
 

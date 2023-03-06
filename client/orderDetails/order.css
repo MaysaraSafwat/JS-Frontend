@@ -37,6 +37,10 @@ header{
     font-family: 'Abril Fatface', cursive;
     padding-left: 5%;
 }
+.nav-brand a {
+    color: var(--blue);
+    text-decoration: none;
+}
 ul li {
     font-family: 'Poppins', sans-serif;
     padding: 4px;
@@ -481,4 +485,13 @@ footer{
         height: fit-content;
       }
 
+}
+.success-modal-btn{
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 2% 3%;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 10%;
+    font-weight: 500;
 }

@@ -1,15 +1,17 @@
 let label = document.getElementById("label");
 let ShoppingCart = document.getElementById("shopping-cart");
 let basket = JSON.parse(localStorage.getItem("cart"))||[] ;
-//console.log(basket)
+
 function calculation() {
 let cartIcon = document.getElementById("cartAmount");
 cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
  
 }
-calculation();
-// =====================================================GENERTA CART===========================================
 
+// =====================================================GENERTA CART===========================================
+let items =  basket.length;
+let padge = document.getElementById("cart-counter");
+   padge.innerHTML = `${items}`
 function generateCartItems() {
   ShoppingCart.innerHTML=" <tr><th>number</th><th>name</th><th>price</th><th>image</th><th>catgory</th><th>quantity</th><th>total price</th><th>delete</th></tr>"
   if (basket.length !== 0) {

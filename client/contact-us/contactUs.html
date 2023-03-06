@@ -49,11 +49,7 @@
             <div class="brand nav-brand w-30"><a href="../index.html">W&S</a></div>
             <ul class="navbar-nav  w-100 justify-content-end" style="max-width: 80%; margin: 0 auto">
                 <li class="nav-item">
-<<<<<<< HEAD
                   <a class="nav-link active" aria-current="page" href="../index.html#products">Products</a>
-=======
-                  <a class="nav-link active" aria-current="page" href="../index.html">Products</a>
->>>>>>> habiba
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../about/about.html">About</a>
@@ -149,6 +145,10 @@
          e.preventDefault();
         statusTxt.style.display = "block";
       }
+    let cart = JSON.parse(localStorage.getItem("cart"))
+      let items =  cart.length;
+     let padge = document.getElementById("cart-counter");
+   padge.innerHTML = `${items}`
     </script>
   <script src="../auth/auth.js"></script>
   </body>

@@ -3,6 +3,11 @@ console.log(user[0][0])
 let favedProducts =  JSON.parse(localStorage.getItem("favoriteProducts"));
 console.log(favedProducts);
 
+let cart = JSON.parse(localStorage.getItem("cart"))
+let items =  cart.length;
+let padge = document.getElementById("cart-counter");
+padge.innerHTML = `${items}`
+
 let username = document.getElementById("card-name")
 let useremail = document.getElementById ("card-email");
 let usernumber  = document.getElementById("card-number")
